@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Configurations>Debug;Release;QA;PROD;Staging</Configurations>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="AppData\**" />
+	  <Compile Remove="Common\Utility\**" />
+	  <Compile Remove="Interfaces\**" />
+	  <Compile Remove="Model\**" />
+	  <Compile Remove="Services\**" />
+	  <EmbeddedResource Remove="AppData\**" />
+	  <EmbeddedResource Remove="Common\Utility\**" />
+	  <EmbeddedResource Remove="Interfaces\**" />
+	  <EmbeddedResource Remove="Model\**" />
+	  <EmbeddedResource Remove="Services\**" />
+	  <None Remove="AppData\**" />
+	  <None Remove="Common\Utility\**" />
+	  <None Remove="Interfaces\**" />
+	  <None Remove="Model\**" />
+	  <None Remove="Services\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="CsvHelper" Version="30.0.1" />
+		<PackageReference Include="FluentValidation" Version="10.3.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Domain\FlexiSchools.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Common\Helpers\" />
+	</ItemGroup>
+
+</Project>
